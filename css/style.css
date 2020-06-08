@@ -94,22 +94,118 @@ article:first-of-type {
 }
 
 article {
-  height: 50vh;
+  min-height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
   border-bottom: 2px solid black;
+  background: #797979;
 }
 
 article .content {
   height: 100vh;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 
 article .content .topContent {
   min-height: 5vh;
+  min-height: 50px;
   background: grey;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
+  font-size: 40px;
 }
 
 article .content .descContent {
   min-height: 95vh;
-  background: whitesmoke;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+article.inputSection .content {
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+article.inputSection .content h1 {
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+article.inputSection .content input, article.inputSection .content select, article.inputSection .content .input {
+  height: 50px;
+  width: 220px;
+  font-size: 22px;
+  border: none;
+  border-radius: 8px;
+}
+
+article.inputSection .content input:focus, article.inputSection .content select:focus, article.inputSection .content .input:focus {
+  outline: none;
+  background: silver;
+}
+
+article.inputSection .content .inputsContainer {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+article.inputSection .content .inputsContainer .inputWrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  margin: 0 10px;
+}
+
+article.inputSection .content .inputsContainer .inputWrapper label {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+article.inputSection .content .inputsContainer .inputWrapper p.info {
+  font-size: 18px;
+  color: red;
+  height: 24px;
+}
+
+article.inputSection .content .destinyNumberWrap {
+  margin-top: 20px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 24px;
+  min-height: 200px;
+}
+
+article.inputSection .content .destinyNumberWrap .destinyNumber {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  font-size: 70px;
+  width: 80px;
+  background: blue;
 }
 
 @media (max-width: 767px) {

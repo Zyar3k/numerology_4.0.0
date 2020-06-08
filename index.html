@@ -43,34 +43,57 @@
 		</div> -->
 	</header>
 
-	<article id="start">
+	<article id="start" class="inputSection">
 		<div class="content">
 
 			<h1>
-				podaj datę urodzenia
+				Podaj datę urodzenia
 			</h1>
 
 				<div class="inputsContainer">
 					<div class="inputWrapper">
 						<label for="dayInput">Dzień</label>
-						<input type="number" name="dayInput" id="dayInput" required>
+						<input type="number" name="dayInput" id="dayInput">
+						<p class="info"></p>
 					</div>
 			
 					<div class="inputWrapper">
 						<label for="monthInput">Miesiąc</label>
-						<input type="number" name="monthInput" id="monthInput">
+						<select class="input" id="monthInput" name="monthInput">
+							<option value=""></option>
+							<option value="1">styczeń</option>
+							<option value="2">luty</option>
+							<option value="3">marzec</option>
+							<option value="4">kwiecień</option>
+							<option value="5">maj</option>
+							<option value="6">czerwiec</option>
+							<option value="7">lipiec</option>
+							<option value="8">sierpień</option>
+							<option value="9">wrzesień</option>
+							<option value="1">październik</option>
+							<option value="2">listopad</option>
+							<option value="3">grudzień</option>
+						</select>
+						<p class="info"></p>
 					</div>
 			
 					<div class="inputWrapper">
 						<label for="yearInput">Rok</label>
 						<input type="number" name="yearInput" id="yearInput">
+						<p class="info"></p>
 					</div>
-					<input type="button" id="checkBtn" value="Sprawdź">
+				</div>
+				<input class="input" type="button" id="checkBtn" value="Sprawdź">
+
+				<div class="destinyNumberWrap">
+					<div class="destinyNumberTitle">
+						Twoja liczba osobista to:
+					</div>
+					<div class="destinyNumber">
+	
+					</div>
 				</div>
 
-				<div class="destinyNumber">
-
-				</div>
 
 		</div>
 
@@ -127,7 +150,7 @@
 		</div>
 	</article>
 
-	<article id="month-input">
+	<article id="month-input"  class="inputSection">
 		<div class="content">
 
 			<h1>
@@ -141,15 +164,31 @@
 		
 				<div class="inputWrapper">
 					<label for="monthInput">Miesiąc</label>
-					<input type="number" name="monthInput" id="monthInputSpecial">
+					<select class="input" id="monthInput" name="monthInput">
+						<option value=""></option>
+						<option value="1">styczeń</option>
+						<option value="2">luty</option>
+						<option value="3">marzec</option>
+						<option value="4">kwiecień</option>
+						<option value="5">maj</option>
+						<option value="6">czerwiec</option>
+						<option value="7">lipiec</option>
+						<option value="8">sierpień</option>
+						<option value="9">wrzesień</option>
+						<option value="1">październik</option>
+						<option value="2">listopad</option>
+						<option value="3">grudzień</option>
+					</select>
+					<p class="info"></p>
 				</div>
 		
 				<div class="inputWrapper">
 					<label for="yearInput">Rok</label>
 					<input type="number" name="yearInput" id="yearInputSpecial">
+					<p class="info"></p>
 				</div>
-				<input type="button" id="checkMonthBtn" value="Sprawdź">
 			</div>
+			<input type="button" id="checkMonthBtn" value="Sprawdź">
 
 		</div>
 	</article>
@@ -172,7 +211,7 @@
 		</div>
 	</article>
 
-	<article id="day-input">
+	<article id="day-input"  class="inputSection">
 		<div class="content">
 
 			<h1>
@@ -182,19 +221,36 @@
 				<div class="inputWrapper">
 					<label for="dayInput">Dzień</label>
 					<input type="number" name="dayInput" id="specialDayInput">
+					<p class="info"></p>
 				</div>
 		
 				<div class="inputWrapper">
 					<label for="monthInput">Miesiąc</label>
-					<input type="number" name="monthInput" id="specialMonthInput">
+					<select id="monthInput" name="monthInput">
+						<option value=""></option>
+						<option value="1">styczeń</option>
+						<option value="2">luty</option>
+						<option value="3">marzec</option>
+						<option value="4">kwiecień</option>
+						<option value="5">maj</option>
+						<option value="6">czerwiec</option>
+						<option value="7">lipiec</option>
+						<option value="8">sierpień</option>
+						<option value="9">wrzesień</option>
+						<option value="1">październik</option>
+						<option value="2">listopad</option>
+						<option value="3">grudzień</option>
+					</select>
+					<p class="info"></p>
 				</div>
 		
 				<div class="inputWrapper">
 					<label for="yearInput">Rok</label>
 					<input type="number" name="yearInput" id="specialYearInput">
+					<p class="info"></p>
 				</div>
-				<input type="button" id="checkDayBtn" value="Sprawdź">
 			</div>
+			<input type="button" id="checkDayBtn" value="Sprawdź">
 
 		</div>
 	</article>
