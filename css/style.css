@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+article {
+  min-height: 100vh;
+  border-bottom: 2px solid black;
+}
+
+article .content {
+  height: 100vh;
+}
+
+article .content .topContent {
+  min-height: 5vh;
+  background: grey;
+}
+
+article .content .descContent {
+  min-height: 95vh;
+  background: whitesmoke;
+}
+/*# sourceMappingURL=style.css.map */
