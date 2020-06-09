@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul {
@@ -12,64 +11,65 @@ h1, h2, h3, h4, h5, h6, p, ul {
 body {
   margin: 0;
   padding: 0;
+  color: #fff;
+  background: #0a4c7e;
+}
+
+body a {
+  color: #fff;
+  text-decoration: none;
 }
 
 header {
-  margin: auto;
+  position: fixed;
   left: 0;
   right: 0;
-  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 header #desktop ul {
-  background: grey;
-  height: 80px;
-  list-style: none;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
-header #desktop ul a {
-  font-size: 30px;
-  text-decoration: none;
+header #desktop ul li {
+  list-style: none;
+  padding: 10px 0;
+}
+
+header #desktop ul li a {
+  font-size: 24px;
 }
 
 header #mobile ul {
-  margin: 0;
-  list-style: none;
-  padding: 0;
-  padding-top: 40%;
-  background: grey;
-  top: 0;
-  min-height: 100vh;
-  left: -70vw;
-  width: 70vw;
-  position: fixed;
-  transition: transform .3s;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
+  background: #0a4c7e;
   -ms-flex-direction: column;
       flex-direction: column;
-  -ms-flex-pack: space-evenly;
-      justify-content: space-evenly;
-  border-right: 2px solid #fff;
+  min-height: 100vh;
+  left: -70%;
+  width: 70%;
+  position: fixed;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  font-size: 24px;
+  box-shadow: 2px 2px 4px black;
+  transition: transform .3s;
 }
 
 header #mobile ul li {
-  width: 100%;
-  padding: 26px;
-  text-align: right;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  padding: 20px;
 }
 
 header #mobile ul li a {
-  color: #fff;
-  font-size: 24px;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 4px black;
+  padding: 20px;
 }
 
 header #mobile ul.active {
@@ -77,7 +77,7 @@ header #mobile ul.active {
   box-shadow: 2px 0px 6px rgba(0, 0, 0, 0.75);
 }
 
-.hamburger {
+header .hamburger {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -85,64 +85,110 @@ header #mobile ul.active {
   display: none;
 }
 
-.hamburger i {
+header .hamburger i {
   padding: 20px;
-}
-
-article:first-of-type {
-  padding-top: 80px;
 }
 
 article {
   min-height: 100vh;
   display: -ms-flexbox;
   display: flex;
-  border-bottom: 2px solid black;
-  background: #797979;
 }
 
 article .content {
-  min-height: 100vh;
+  margin-top: 50px;
   width: 100%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  min-height: 100%;
 }
 
 article .content .topContent {
-  min-height: 5vh;
-  min-height: 50px;
-  background: grey;
   display: -ms-flexbox;
   display: flex;
+  height: 5%;
+  font-size: 40px;
   -ms-flex-align: center;
       align-items: center;
   -ms-flex-pack: space-evenly;
       justify-content: space-evenly;
-  font-size: 40px;
 }
 
 article .content .descContent {
-  min-height: 95vh;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
+  font-size: 22px;
+  min-height: auto;
+}
+
+article .content .nextWrapper {
+  display: -ms-flexbox;
+  display: flex;
+  height: 10%;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  padding: 5px 0;
+}
+
+article .content .btnNext {
+  min-height: 60px;
+  width: 220px;
+  font-size: 22px;
+  border: none;
+  border-radius: 8px;
+  background: orange;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+article .content .btnNext:focus, article .content .btnNext:hover {
+  outline: none;
+  background: orangered;
 }
 
 article.inputSection .content {
   -ms-flex-align: center;
       align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-article.inputSection .content h1 {
-  font-size: 40px;
-  margin: 20px 0;
+article.inputSection .content .introContent {
+  height: 20%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+article.inputSection .content .introContent .intro {
+  text-align: center;
+  font-size: 24px;
+  width: 90%;
+}
+
+article.inputSection .content .introContent h1 {
+  font-size: 34px;
 }
 
 article.inputSection .content input, article.inputSection .content select, article.inputSection .content .input {
@@ -182,8 +228,11 @@ article.inputSection .content .inputsContainer .inputWrapper p.info {
   height: 24px;
 }
 
+article.inputSection .content .input {
+  cursor: pointer;
+}
+
 article.inputSection .content .destinyNumberWrap {
-  margin-top: 20px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -196,6 +245,10 @@ article.inputSection .content .destinyNumberWrap {
   min-height: 200px;
 }
 
+article.inputSection .content .destinyNumberWrap .destinyNumberTitle {
+  letter-spacing: 2px;
+}
+
 article.inputSection .content .destinyNumberWrap .destinyNumber {
   display: -ms-flexbox;
   display: flex;
@@ -205,19 +258,62 @@ article.inputSection .content .destinyNumberWrap .destinyNumber {
       justify-content: center;
   font-size: 70px;
   width: 80px;
-  background: blue;
 }
 
 @media (max-width: 767px) {
   header #desktop ul {
     display: none;
+    background: red;
   }
-  .hamburger {
+  header #mobile ul {
     display: -ms-flexbox;
     display: flex;
   }
-  article:first-of-type {
-    padding-top: 0;
+  header .hamburger {
+    display: -ms-flexbox;
+    display: flex;
+  }
+  article .content {
+    margin-top: 0;
+  }
+  article.inputSection .content .introContent .intro {
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
+  }
+  article.inputSection .content .introContent h1 {
+    font-size: 24px;
+  }
+  article.inputSection .content input, article.inputSection .content select, article.inputSection .content .input {
+    height: 50px;
+    width: 220px;
+    font-size: 22px;
+    border: none;
+    border-radius: 8px;
+  }
+  article.inputSection .content .inputsContainer {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  article.inputSection .content .inputsContainer .inputWrapper label {
+    font-size: 22px;
+    margin-bottom: 6px;
+  }
+  article.inputSection .content .inputsContainer .inputWrapper p.info {
+    font-size: 16px;
+    color: red;
+    height: 20px;
+    text-align: center;
+  }
+  article.inputSection .content .destinyNumberWrap {
+    min-height: 100px;
+  }
+  article.inputSection .content .destinyNumberWrap .destinyNumberTitle {
+    letter-spacing: 0;
+  }
+  article.inputSection .content .destinyNumberWrap .destinyNumber {
+    font-size: 50px;
+    width: 60px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul {
@@ -12,194 +11,303 @@ h1, h2, h3, h4, h5, h6, p, ul {
 body {
   margin: 0;
   padding: 0;
+  color: #fff;
+  background: #0a4c7e;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
 }
 
 header {
-  margin: auto;
+  position: fixed;
   left: 0;
   right: 0;
-  position: fixed;
-  
-  #desktop ul {
-    background: grey;
-    height: 80px;
-    list-style: none;
-    display: flex;
-    align-items: center;
+  top: 0;
+  width: 100%;
 
+  #desktop ul {
+    display: flex;
     justify-content: space-around;
 
-    a {
-      font-size: 30px;
-      text-decoration: none;
+    li {
+      list-style: none;
+      padding: 10px 0;
+
+      a {
+        font-size: 24px;
+      }
     }
   }
 
   #mobile ul {
-
-    margin: 0;
-      list-style: none;
-      padding: 0;
-      padding-top: 40%;
-      background: grey;
-      top: 0;
-      min-height: 100vh;
-      left: -70vw;
-      width: 70vw;
-      position: fixed;
-      transition: transform .3s;
+    display: none;
+    background: #0a4c7e;
+    flex-direction: column;
+    min-height: 100vh;
+    left: -70%;
+    width: 70%;
+    position: fixed;
+    justify-content: flex-end;
+    font-size: 24px;
+    box-shadow: 2px 2px 4px black;
+    transition: transform .3s;
+    
+    li {
       display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      border-right: 2px solid #fff;
+      justify-content: flex-end;
+      padding: 20px;
 
-      li {
-        width: 100%;
-        padding: 26px;
-        text-align: right;
-
-        a {
-          color: #fff;
-          font-size: 24px;
-          text-transform: uppercase;
-          text-shadow: 1px 1px 4px black;
-        }
+      a {
+        padding: 20px;
       }
+    }
 
-      &.active {
-        transform: translateX(100%);
-        box-shadow: 2px 0px 6px rgba(0,0,0,0.75);
-      }
-  }
-}
-
-.hamburger {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  font-size: 60px;
-  display: none;
-
-  i {
-    padding: 20px;
+    &.active {
+      transform: translateX(100%);
+      box-shadow: 2px 0px 6px rgba(0,0,0,0.75);
+    }
   }
 
-}
+  .hamburger {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    font-size: 60px;
+    display: none;
 
-article:first-of-type {
-  padding-top: 80px;
+    i {
+      padding: 20px;
+    }
+  }
 }
 
 article {
   min-height: 100vh;
   display: flex;
-  border-bottom: 2px solid black;
-  background: rgb(121, 121, 121);
 
   .content {
-    min-height: 100vh;
+    margin-top: 50px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    min-height: 100%;
 
     .topContent {
-      min-height: 5vh;
-      min-height: 50px;
-      background: grey;
       display: flex;
+      height: 5%;
+      font-size: 40px;
       align-items: center;
       justify-content: space-evenly;
-      font-size: 40px;
     }
 
     .descContent {
-      min-height: 95vh;
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-  }
-}
-
-article.inputSection {
-  .content {
-    align-items: center;
-
-    h1 {
-      font-size: 40px;
-      margin: 20px 0;
+      font-size: 22px;
+      min-height: auto;
     }
 
-    input, select, .input {
-      height: 50px;
+    .nextWrapper {
+      display: flex;
+      height: 10%;
+      align-items: center;
+      justify-content: center;
+      padding: 5px 0;
+    }
+
+    .btnNext {
+      min-height: 60px;
       width: 220px;
       font-size: 22px;
       border: none;
       border-radius: 8px;
+      background: orange;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-decoration: none;
 
-      &:focus {
+      &:focus, &:hover {
         outline: none;
-        background: silver;
+        background: orangered;
       }
     }
+  }
 
-    .inputsContainer {
-      display: flex;
-
-      .inputWrapper {
-        display: flex;
-        flex-direction: column;
-        margin: 0 10px;
-
-        label {
-          font-size: 22px;
-          margin-bottom: 10px;
-        }
-
-        p.info {
-          font-size: 18px;
-          color: red;
-          height: 24px;
-          
-        }
-      }
-    }
-
-    .destinyNumberWrap {
-      margin-top: 20px;
-      // background: red;
-      display: flex;
-      flex-direction: column;
+  &.inputSection {
+    
+    .content {
       align-items: center;
       justify-content: space-around;
-      font-size: 24px;
-      min-height: 200px;
-      .destinyNumber {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 70px;
-        width: 80px;
-        background: blue;
 
+      .introContent {
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        .intro {
+          text-align: center;
+          font-size: 24px;
+          width: 90%;
+        }
+
+        h1 {
+          font-size: 34px;
+        }
+      }
+
+      input, select, .input {
+        height: 50px;
+        width: 220px;
+        font-size: 22px;
+        border: none;
+        border-radius: 8px;
+  
+        &:focus {
+          outline: none;
+          background: silver;
+        }
+      }
+
+      .inputsContainer {
+        display: flex;
+
+        .inputWrapper {
+          display: flex;
+          flex-direction: column;
+          margin: 0 10px;
+
+          label {
+            font-size: 22px;
+            margin-bottom: 10px;
+          }
+
+          p.info {
+            font-size: 18px;
+            color: red;
+            height: 24px;
+          }
+        }
+      }
+
+      .input {
+        cursor: pointer;
+      }
+
+      .destinyNumberWrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 24px;
+        min-height: 200px;
+
+        .destinyNumberTitle {
+          letter-spacing: 2px;
+        }
+
+        .destinyNumber {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 70px;
+          width: 80px;
+          // background: blue;
+        }
       }
     }
   }
 }
 
 @media(max-width: 767px) {
+
   header {
+
     #desktop ul {
       display: none;
+      background: red;
+    }
+
+    #mobile ul {
+      display: flex;
+    }
+
+    .hamburger {
+      display: flex;
     }
   }
 
-  .hamburger {
-    display: flex;
-  }
+  article {
 
-  article:first-of-type {
-    padding-top: 0;
+    .content {
+      margin-top: 0;
+    }
+
+    &.inputSection {
+
+      .content {
+
+        .introContent {
+
+          .intro {
+            text-align: center;
+            font-size: 16px;
+            width: 100%;
+          }
+
+          h1 {
+            font-size: 24px;
+          }
+        }
+
+        input, select, .input {
+          height: 50px;
+          width: 220px;
+          font-size: 22px;
+          border: none;
+          border-radius: 8px;
+        }
+
+        .inputsContainer {
+          flex-direction: column;
+
+          .inputWrapper {
+  
+            label {
+              font-size: 22px;
+              margin-bottom: 6px;
+            }
+  
+            p.info {
+              font-size: 16px;
+              color: red;
+              height: 20px;
+              text-align: center;
+            }
+          }
+        }
+
+        .destinyNumberWrap {
+          min-height: 100px;
+  
+          .destinyNumberTitle {
+            letter-spacing: 0;
+          }
+  
+          .destinyNumber {
+            font-size: 50px;
+            width: 60px;
+            // background: blue;
+          }
+        }
+      }
+    }
   }
 }

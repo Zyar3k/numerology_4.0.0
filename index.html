@@ -14,14 +14,13 @@
 		<div id="desktop">
 			<ul>
 				<li><a href="#start">Start</a></li>
-				<li><a href="#destiny">destiny</a></li>
-				<li><a href="#personal-year">personal-year</a></li>
-				<li><a href="#birthday">birthday</a></li>
-				<li><a href="#month-input">month-input</a></li>
-				<li><a href="#day-input">day-input</a></li>
+				<li><a href="#destiny">Twoje przeznaczenie</a></li>
+				<li><a href="#personal-year">Osobisty rok</a></li>
+				<li><a href="#birthday">Znaczenie daty urodzin</a></li>
+				<li><a href="#month-input">Wróżba miesięczna</a></li>
+				<li><a href="#day-input">Wróżba dzienna</a></li>
 			</ul>
 		</div>
-
 		<div id="mobile">
 			<ul class="">
 				<li><a href="#start">Start</a></li>
@@ -32,72 +31,76 @@
 				<li><a href="#day-input">day-input</a></li>
 			</ul>
 		</div>
-
-		<div class="hamburger">
-
-			<i class="far fa-sun"></i>
-		</div>
-
+		<div class="hamburger"><i class="far fa-sun"></i></div>
 	</header>
 
 	<article id="start" class="inputSection">
 		<div class="content">
-
-			<h1>
-				Podaj datę urodzenia
-			</h1>
-
-				<div class="inputsContainer">
-					<div class="inputWrapper">
-						<label for="dayInput">Dzień</label>
-						<input type="number" name="dayInput" id="dayInput">
-						<p class="info"></p>
-					</div>
-			
-					<div class="inputWrapper">
-						<label for="monthInput">Miesiąc</label>
-						<select class="input" id="monthInput" name="monthInput">
-							<option value=""></option>
-							<option value="1">styczeń</option>
-							<option value="2">luty</option>
-							<option value="3">marzec</option>
-							<option value="4">kwiecień</option>
-							<option value="5">maj</option>
-							<option value="6">czerwiec</option>
-							<option value="7">lipiec</option>
-							<option value="8">sierpień</option>
-							<option value="9">wrzesień</option>
-							<option value="1">październik</option>
-							<option value="2">listopad</option>
-							<option value="3">grudzień</option>
-						</select>
-						<p class="info"></p>
-					</div>
-			
-					<div class="inputWrapper">
-						<label for="yearInput">Rok</label>
-						<input type="number" name="yearInput" id="yearInput">
-						<p class="info"></p>
-					</div>
-				</div>
-				<input class="input" type="button" id="checkBtn" value="Sprawdź">
-
-				<div class="destinyNumberWrap">
-					<div class="destinyNumberTitle">
-						Twoja liczba osobista to:
-					</div>
-					<div class="destinyNumber">
-	
-					</div>
+			<div class="introContent">
+				<div class="intro">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, repellat saepe praesentium, vero quia sapiente perferendis vel, veritatis architecto corrupti minus velit. Explicabo unde ratione doloremque fugit delectus, soluta esse.
+					Dolore, at laborum? Provident illo eum dolorem voluptate ducimus molestiae aspernatur consequatur earum rerum. Quo officia illo sequi pariatur!
 				</div>
 
+				<h1>Podaj datę urodzenia</h1>
+			</div>
 
+
+			<div class="inputsContainer">
+				<div class="inputWrapper">
+					<label for="dayInput">Dzień</label>
+					<input type="number" name="dayInput" id="dayInput" min="0" max="31">
+					<p class="info"></p>
+				</div>
+		
+				<div class="inputWrapper">
+					<label for="monthInput">Miesiąc</label>
+					<select class="input" id="monthInput" name="monthInput">
+						<option value=""></option>
+						<option value="1">styczeń</option>
+						<option value="2">luty</option>
+						<option value="3">marzec</option>
+						<option value="4">kwiecień</option>
+						<option value="5">maj</option>
+						<option value="6">czerwiec</option>
+						<option value="7">lipiec</option>
+						<option value="8">sierpień</option>
+						<option value="9">wrzesień</option>
+						<option value="1">październik</option>
+						<option value="2">listopad</option>
+						<option value="3">grudzień</option>
+					</select>
+					<p class="info"></p>
+				</div>
+		
+				<div class="inputWrapper">
+					<label for="yearInput">Rok</label>
+					<input type="number" name="yearInput" id="yearInput">
+					<p class="info"></p>
+				</div>
+			</div>
+
+			<input class="input" type="button" id="checkBtn" value="Sprawdź">
+
+			<div class="destinyNumberWrap">
+				<div class="destinyNumberTitle">
+					Twoja liczba osobista to:
+				</div>
+				<div class="destinyNumber">
+
+				</div>
+			</div>
+
+			<div class="nextWrapper">
+				<a class="btnNext" href="#destiny">Twoje przeznaczenie</a>
+			</div>
 		</div>
 
 	</article>
 
 	<article id="destiny">
 		<div class="content">
+			
 			<div class="topContent">
 				<div>
 					przeznaczenie
@@ -110,6 +113,11 @@
 			<div class="descContent">
 
 			</div>
+			<div class="nextWrapper">
+
+				<a class="btnNext" href="#personal-year">Osobisty rok</a>
+			</div>
+
 		</div>
 	</article>
 
@@ -126,6 +134,10 @@
 			</div>
 			<div class="descContent">
 
+			</div>
+			<div class="nextWrapper">
+
+				<a class="btnNext" href="#birthday">Dzień urodzenia</a>
 			</div>
 		</div>
 	</article>
@@ -144,20 +156,25 @@
 			<div class="descContent">
 
 			</div>
+			<div class="nextWrapper">
+
+				<a class="btnNext" href="#month-input">Wróżba miesięczna</a>
+			</div>
 		</div>
 	</article>
 
 	<article id="month-input"  class="inputSection">
 		<div class="content">
 
-			<h1>
-				inputy
-			</h1>
+			<div class="introContent">
+				<div class="intro">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, repellat saepe praesentium, vero quia sapiente perferendis vel, veritatis architecto corrupti minus velit. Explicabo unde ratione doloremque fugit delectus, soluta esse.
+					Dolore, at laborum? Provident illo eum dolorem voluptate ducimus molestiae aspernatur consequatur earum rerum. Quo officia illo sequi pariatur!
+				</div>
+
+				<h1>Podaj miesiąc, aby poznać osobiste wibracje</h1>
+			</div>
 			<div class="inputsContainer">
-				<!-- <div class="inputWrapper">
-					<label for="dayInput">Dzień</label>
-					<input type="number" name="dayInput" id="dayInput">
-				</div> -->
 		
 				<div class="inputWrapper">
 					<label for="monthInput">Miesiąc</label>
@@ -187,6 +204,9 @@
 			</div>
 			<input type="button" id="checkMonthBtn" value="Sprawdź">
 
+			<div class="nextWrapper">
+				<a class="btnNext" href="#special-month">Szczególny miesiąc</a>
+			</div>
 		</div>
 	</article>
 
@@ -194,9 +214,9 @@
 		
 		<div class="content">
 			<div class="topContent">
-				<h1>
+				<div>
 					szczególny miesiąc
-				</h1>
+				</div>
 				<div id="specialMonthOutput">
 
 				</div>
@@ -205,15 +225,25 @@
 			<div class="descContent">
 
 			</div>
+
+			<div class="nextWrapper">
+
+				<a class="btnNext" href="#day-input">Wróżba dzienna</a>
+			</div>
 		</div>
 	</article>
 
 	<article id="day-input"  class="inputSection">
 		<div class="content">
 
-			<h1>
-				inputy
-			</h1>
+			<div class="introContent">
+				<div class="intro">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, repellat saepe praesentium, vero quia sapiente perferendis vel, veritatis architecto corrupti minus velit. Explicabo unde ratione doloremque fugit delectus, soluta esse.
+					Dolore, at laborum? Provident illo eum dolorem voluptate ducimus molestiae aspernatur consequatur earum rerum. Quo officia illo sequi pariatur!
+				</div>
+
+				<h1>Podaj dzień, aby poznać osobiste wibracje</h1>
+			</div>
 			<div class="inputsContainer">
 				<div class="inputWrapper">
 					<label for="dayInput">Dzień</label>
@@ -249,6 +279,9 @@
 			</div>
 			<input type="button" id="checkDayBtn" value="Sprawdź">
 
+			<div class="nextWrapper">
+				<a class="btnNext" href="#special-day">Twója szczególny dzień</a>
+			</div>
 		</div>
 	</article>
 
@@ -256,15 +289,19 @@
 		
 		<div class="content">
 			<div class="topContent">
-				<h1>
+				<div>
 					szczególny dzień
-				</h1>
+				</div>
 				<div id="specialDayOutput">
 
 				</div>
 			</div>
 			<div class="descContent">
 
+			</div>
+			<div class="nextWrapper">
+
+				<a class="btnNext" href="#start">Nowa data</a>
 			</div>
 		</div>
 	</article>
