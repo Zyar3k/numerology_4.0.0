@@ -166,15 +166,68 @@ data.birthday = {
   }
 }
 
-// let data = {};
-// data = {
-
-//   destinyNumber = {
-//     
-//   },
-//   // let personalYear = {};
+data.specialMonth = {
   
-//   personalYear = {
-//     
-//   },
-// }
+  monthNumber : {
+    1 : {
+      description: 'month 1',
+    },
+    2 : {
+      description: 'month 2',
+    },
+    3 : {
+      description: 'month 3',
+    },
+    4 : {
+      description: 'month 4',
+    },
+    5 : {
+      description: 'month 5',
+    },
+    6 : {
+      description: 'month 6',
+    },
+    7 : {
+      description: 'month 7',
+    },
+    8 : {
+      description: 'month 8',
+    },
+    9 : {
+      description: 'month 9',
+    },
+  }
+}
+
+data.specialDay = {
+  
+  dayNumber : {
+    1 : {
+      description: 'special day 1',
+    },
+    2 : {
+      description: 'special day 2',
+    },
+    3 : {
+      description: 'special day 3',
+    },
+    4 : {
+      description: 'special day 4',
+    },
+    5 : {
+      description: 'special day 5',
+    },
+    6 : {
+      description: 'special day 6',
+    },
+    7 : {
+      description: 'special day 7',
+    },
+    8 : {
+      description: 'special day 8',
+    },
+    9 : {
+      description: 'special day 9',
+    },
+  }
+}

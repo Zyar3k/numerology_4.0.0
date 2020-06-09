@@ -10,17 +10,24 @@ burger.addEventListener('click', () => {
 const destinyNumber = data.destiny.destinyNumber;
 const personalYearDB = data.personalYear.yearNumber;
 const birthdayNumber = data.birthday.birthday;
+const specialMonth = data.specialMonth.monthNumber;
+const specialDay = data.specialDay.dayNumber;
 
 // button
 const checkBtn = document.querySelector('#checkBtn');
 const checkMonthBtn = document.querySelector('#checkMonthBtn');
 const checkDayBtn = document.querySelector('#checkDayBtn');
 
-// var
+// inputs
 let dayInput = document.querySelector('#dayInput');
 let monthInput = document.querySelector('#monthInput');
 let yearInput = document.querySelector('#yearInput');
 
+// special
+let monthSpecial = document.querySelector('#monthInputSpecial');
+let yearSpecial = document.querySelector('#yearInputSpecial');
+
+// help func
 function splitToDigit(n){
   return (n + '').split('').map((i) => { return Number(i); });
 }
@@ -35,6 +42,8 @@ function reduceToDigit(n) {
     return split
   }
 }
+
+// main func
 
 function getDay() {
   let day = dayInput.value;
@@ -133,13 +142,57 @@ checkBtn.addEventListener('click', () => {
 
 });
 
+function getSpecialMonth() {
+  let month = monthSpecial.value;
+  if (month === '') {
+    monthSpecial.parentElement.querySelector('.info').innerHTML = 'Wypełnij pole';
+    return month
+  }
+  monthSpecial.parentElement.querySelector('.info').innerHTML = '';
+  month = parseInt(month);
+  return month
+}
+
+function getSpecialYear() {
+  let year = yearSpecial.value;
+  let currentYear = new Date().getFullYear();
+  if (year === '') {
+    yearSpecial.parentElement.querySelector('.info').innerHTML = 'Wypełnij pole';
+    return
+  } else if (year > currentYear) {
+    yearSpecial.parentElement.querySelector('.info').innerHTML = 'Podaj poprawny rok';
+    return
+  } else
+  yearSpecial.parentElement.querySelector('.info').innerHTML = '';
+  if (year >= 10) year = reduceToDigit(year);
+  if (year >= 10) year = reduceToDigit(year);
+  return year
+}
+
 function putSpecialMonth() {
-  document.querySelector('#specialMonthOutput').innerHTML = "6";
-  document.querySelector('#special-month .descContent').innerHTML = 'description';
+
+  let dayB = getDay();
+  let monthB = getMonth();
+  let sumB = dayB + monthB;
+  if (sumB >= 10) sumB = reduceToDigit(sumB);
+  let monthS = getSpecialMonth();
+  let yearS = getSpecialYear();
+  let sumS = monthS + yearS;
+  if (sumS >= 10) sumS = reduceToDigit(sumS);
+
+  let monthNumber = sumB + sumS;
+  if (monthNumber >= 10) monthNumber = reduceToDigit(monthNumber);
+
+  if (monthS !== '' || yearS !== undefined || monthB !== '' || dayB !== undefined) {
+    document.querySelector('#omenInfo').innerHTML= 'Twoja wróżba jest gotowa'
+    document.querySelector('#specialMonthOutput').innerHTML = monthNumber;
+    document.querySelector('#special-month .descContent').innerHTML = specialMonth[monthNumber].description;
+  } else {
+    return
+  }
 }
 
 checkMonthBtn.addEventListener('click', () => {
-  console.log('checkMonthBtn')
   putSpecialMonth();
 
 });
