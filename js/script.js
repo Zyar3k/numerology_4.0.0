@@ -76,9 +76,10 @@ function getNumber(input) {
 
 function dayStart() {
   let day = reduceToDigit(getNumber(dInpDest));
+  console.log(day)
   if (day === undefined) {
     dInpDest.parentElement.querySelector('.info').innerHTML = 'Wypełnij pole';
-  } else if (day <= 0 || day > 31) {
+  } else if (getNumber(dInpDest) <= 0 || getNumber(dInpDest) > 31) {
     dInpDest.parentElement.querySelector('.info').innerHTML = 'Podaj poprawny dzień';
   } else
     dInpDest.parentElement.querySelector('.info').innerHTML = '';
@@ -190,71 +191,51 @@ checkMonthBtn.addEventListener('click', () => {
   putSpecialMonth();
 });
 
+function daySP() {
+  let day = reduceToDigit(getNumber(dSpDay));
+  if (day === undefined) {
+    dSpDay.parentElement.querySelector('.info').innerHTML = 'Wypełnij pole';
+  } else if (getNumber(dSpDay) <= 0 || getNumber(dSpDay) > 31) {
+    dSpDay.parentElement.querySelector('.info').innerHTML = 'Podaj poprawny dzień';
+  } else
+    dSpDay.parentElement.querySelector('.info').innerHTML = '';
+    console.log(day)
+  return day
+}
 
+function monthSD() {
+  const month = reduceToDigit(getNumber(mSpDay));
+  if (month === undefined) {
+    mSpDay.parentElement.querySelector('.info').innerHTML = 'Wypełnij pole';
+  } else mSpDay.parentElement.querySelector('.info').innerHTML = '';
+  return month
+}
 
-// function getSpecialMonth() {
-//   let month = monthSpecial.value;
-//   if (month === '') {
-//     monthSpecial.parentElement.querySelector('.info').innerHTML = 'Wypełnij pole';
-//     return month
-//   }
-//   monthSpecial.parentElement.querySelector('.info').innerHTML = '';
-//   month = parseInt(month);
-//   return month
-// }
+function yearSD() {
+  let year = reduceToDigit(getNumber(ySpDay));
+  if (year === undefined) {
+    ySpDay.parentElement.querySelector('.info').innerHTML = 'Wypełnij pole';
+  } else if (year <= 0) {
+    ySpDay.parentElement.querySelector('.info').innerHTML = 'Podaj poprawny rok';
+  } else
+  ySpDay.parentElement.querySelector('.info').innerHTML = '';
+  return year
+}
 
-// function getSpecialYear() {
-//   let year = yearSpecial.value;
-//   let currentYear = new Date().getFullYear();
-//   if (year === '') {
-//     yearSpecial.parentElement.querySelector('.info').innerHTML = 'Wypełnij pole';
-//     return
-//   } else if (year > currentYear) {
-//     yearSpecial.parentElement.querySelector('.info').innerHTML = 'Podaj poprawny rok';
-//     return
-//   } else
-//   yearSpecial.parentElement.querySelector('.info').innerHTML = '';
-//   if (year >= 10) year = reduceToDigit(year);
-//   if (year >= 10) year = reduceToDigit(year);
-//   return year
-// }
+function putSpecialDay() {
+  const dest = getDestinyNum();
+  const dSP = daySP();
+  const mSP = monthSD();
+  const ySP = yearSD();
+  const specDest = reduceToDigit(dSP + mSP + ySP);
+  const num = reduceToDigit(dest + specDest);
+  if (num) {    
+    specialDayNum.innerHTML = num;
+    sDayDesc.innerHTML = specialDay[num].description;
+  }
+  return
+}
 
-// function putSpecialMonth() {
-
-//   let dayB = getDay();
-//   let monthB = getMonth();
-//   let sumB = dayB + monthB;
-//   if (sumB >= 10) sumB = reduceToDigit(sumB);
-//   let monthS = getSpecialMonth();
-//   let yearS = getSpecialYear();
-//   let sumS = monthS + yearS;
-//   if (sumS >= 10) sumS = reduceToDigit(sumS);
-
-//   let monthNumber = sumB + sumS;
-//   if (monthNumber >= 10) monthNumber = reduceToDigit(monthNumber);
-
-//   if (monthS !== '' || yearS !== undefined || monthB !== '' || dayB !== undefined) {
-//     document.querySelector('#omenInfo').innerHTML= 'Twoja wróżba jest gotowa'
-//     document.querySelector('#specialMonthOutput').innerHTML = monthNumber;
-//     document.querySelector('#special-month .descContent').innerHTML = specialMonth[monthNumber].description;
-//   } else {
-//     return
-//   }
-// }
-
-// checkMonthBtn.addEventListener('click', () => {
-//   putSpecialMonth();
-
-// });
-
-// function putSpecialDay() {
-//   document.querySelector('#specialDayOutput').innerHTML = "8";
-//   document.querySelector('#special-day .descContent').innerHTML = 'description';
-// }
-
-// checkDayBtn.addEventListener('click', () => {
-//   console.log('checkDayBtn')
-//   putSpecialDay();
-  
-
-// });
+checkDayBtn.addEventListener('click', () => {
+  putSpecialDay();
+});
