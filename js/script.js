@@ -1,6 +1,30 @@
 // console.log('start');
 'use strict';
 
+function scrollAppear() {
+  const introMenu = document.querySelector('.introMenu');
+  const start = document.querySelector('#start')
+  const startPosition = start.getBoundingClientRect().bottom / 2;
+  console.log(startPosition)
+  const screenPosition = window.outerHeight;
+
+  console.log('screenPosition', screenPosition)
+
+  if(startPosition < screenPosition) {
+    introMenu.classList.add('introAppear')
+  }
+}
+
+window.addEventListener('scroll', scrollAppear)
+
+
+// const logo = document.querySelectorAll('#logo path')
+
+// for (let i = 0; i < logo.length; i++) {
+//   // const element = array[i];
+//   console.log(`Letter ${i} is ${logo[i].getTotalLength()}`)
+// }
+
 // hamburger
 const burger = document.querySelector('.fa-sun');
 burger.addEventListener('click', () => {
