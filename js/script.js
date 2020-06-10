@@ -152,6 +152,46 @@ checkBtn.addEventListener('click', ()=> {
   putBirthdayInfo();
 });
 
+function monthSM() {
+  const month = reduceToDigit(getNumber(mSplMonth));
+  if (month === undefined) {
+    mSplMonth.parentElement.querySelector('.info').innerHTML = 'Wypełnij pole';
+  } else mSplMonth.parentElement.querySelector('.info').innerHTML = '';
+  return month
+}
+
+function yearSM() {
+  let year = reduceToDigit(getNumber(ySplMonth));
+  if (year === undefined) {
+    ySplMonth.parentElement.querySelector('.info').innerHTML = 'Wypełnij pole';
+  } else if (year <= 0) {
+    ySplMonth.parentElement.querySelector('.info').innerHTML = 'Podaj poprawny rok';
+  } else
+  ySplMonth.parentElement.querySelector('.info').innerHTML = '';
+  return year
+}
+
+
+function putSpecialMonth() {
+  const bDay = dayStart();
+  const bMonth = monthStart();
+  const spMonth = monthSM();
+  const spYear = yearSM();
+  
+  const num = reduceToDigit(bDay + bMonth + spMonth + spYear);
+  if (num) {
+    specialMonthNum.innerHTML = num;
+    sMonDesc.innerHTML = specialMonth[num].description;
+  }
+  return
+}
+
+checkMonthBtn.addEventListener('click', () => {
+  putSpecialMonth();
+});
+
+
+
 // function getSpecialMonth() {
 //   let month = monthSpecial.value;
 //   if (month === '') {
