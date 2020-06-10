@@ -52,7 +52,7 @@ const sMonDesc = document.querySelector('#special-month .descContent');
 const specialDayNum = document.querySelector('#specialDayOutput');
 const sDayDesc = document.querySelector('#special-day .descContent');
 
-// help func
+// func
 function splitToDigit(n){
   return (n + '').split('').map((i) => { return Number(i); });
 }
@@ -119,6 +119,7 @@ function putDestinyInfo() {
   if (num) {
     destNumber.innerHTML = num;
     destNum.innerHTML = num;
+    document.querySelector('.destinyNumberWrap').classList.add('appear');
     destDesc.innerHTML = destinyNumber[num].description;
   }
   return
@@ -182,6 +183,7 @@ function putSpecialMonth() {
   const num = reduceToDigit(bDay + bMonth + spMonth + spYear);
   if (num) {
     specialMonthNum.innerHTML = num;
+    document.querySelector('#month-input .omenInfo').innerHTML = 'Twoja wróżba jest gotowa';
     sMonDesc.innerHTML = specialMonth[num].description;
   }
   return
@@ -231,6 +233,7 @@ function putSpecialDay() {
   const num = reduceToDigit(dest + specDest);
   if (num) {    
     specialDayNum.innerHTML = num;
+    document.querySelector('#day-input .omenInfo').innerHTML = 'Twoja wróżba jest gotowa';
     sDayDesc.innerHTML = specialDay[num].description;
   }
   return

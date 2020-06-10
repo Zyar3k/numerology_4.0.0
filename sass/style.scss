@@ -101,6 +101,10 @@ article {
       font-size: 40px;
       align-items: center;
       justify-content: space-evenly;
+
+      &.birth {
+        justify-content: center;
+      }
     }
 
     .descContent {
@@ -201,6 +205,9 @@ article {
         cursor: pointer;
       }
 
+      .omenInfo {
+        animation: blink 1s infinite ease-in-out;
+      }
       .destinyNumberWrap {
         display: flex;
         flex-direction: column;
@@ -208,6 +215,8 @@ article {
         justify-content: space-around;
         font-size: 24px;
         min-height: 200px;
+        opacity: 0;
+        transition: all .5s ease-in-out;
 
         .destinyNumberTitle {
           letter-spacing: 2px;
@@ -219,9 +228,22 @@ article {
           justify-content: center;
           font-size: 70px;
           width: 80px;
-          // background: blue;
+          animation: blink 1s infinite ease-in-out;
+        }
+
+        &.appear{
+          opacity: 1;
         }
       }
+    }
+  }
+
+  @keyframes blink {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
     }
   }
 }

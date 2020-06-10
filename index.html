@@ -24,11 +24,11 @@
 		<div id="mobile">
 			<ul class="">
 				<li><a href="#start">Start</a></li>
-				<li><a href="#destiny">destiny</a></li>
-				<li><a href="#personal-year">personal-year</a></li>
-				<li><a href="#birthday">birthday</a></li>
-				<li><a href="#month-input">month-input</a></li>
-				<li><a href="#day-input">day-input</a></li>
+				<li><a href="#destiny">Twoje przeznaczenie</a></li>
+				<li><a href="#personal-year">Osobisty rok</a></li>
+				<li><a href="#birthday">Znaczenie daty urodzin</a></li>
+				<li><a href="#month-input">Wróżba miesięczna</a></li>
+				<li><a href="#day-input">Wróżba dzienna</a></li>
 			</ul>
 		</div>
 		<div class="hamburger"><i class="far fa-sun"></i></div>
@@ -40,18 +40,14 @@
 				<div class="intro">
 					W dniu urodzin zostały Ci nadane pewne energie. Osobiste wibracje energertyczne niezmiennie kierują każdym zdarzeniem i działaniem w Twojej wędrówce przez życie.<br> Zadaniem Twoim jest wybór drogi dobra lub zła. Uparte kroczenie ścieżkami, które nie zostały Ci przypisane, może przynieść tylko rozczarowania i porażki. ALe jeśli tylko skierujesz kroki ku pozytwynej stronie, będziesz mile zaskoczony tym, co przed Tobą się odsłoni. W ten sposób odnajdziesz szczęście. Wszytskie części układanki ułożą się bezbłędnie w jeden pełny obraz.
 				</div>
-
 				<h1>Podaj datę urodzenia</h1>
 			</div>
-
-
 			<div class="inputsContainer">
 				<div class="inputWrapper">
 					<label for="dayBInput">Dzień</label>
 					<input type="number" name="dayBInput" id="dayBInput" min="0" max="31">
 					<p class="info"></p>
 				</div>
-		
 				<div class="inputWrapper">
 					<label for="monthBInput">Miesiąc</label>
 					<select class="input" id="monthBInput" name="monthBInput">
@@ -71,71 +67,46 @@
 					</select>
 					<p class="info"></p>
 				</div>
-		
 				<div class="inputWrapper">
 					<label for="yearBInput">Rok</label>
 					<input type="number" name="yearBInput" id="yearBInput">
 					<p class="info"></p>
 				</div>
 			</div>
-
 			<input class="input" type="button" id="checkBtn" value="Sprawdź">
-
 			<div class="destinyNumberWrap">
 				<div class="destinyNumberTitle">
 					Twoja liczba osobista to:
 				</div>
-				<div class="destinyNumber">
-
-				</div>
+				<div class="destinyNumber"></div>
 			</div>
-
 			<div class="nextWrapper">
 				<a class="btnNext" href="#destiny">Twoje przeznaczenie</a>
 			</div>
 		</div>
-
 	</article>
 
 	<article id="destiny">
 		<div class="content">
-			
 			<div class="topContent">
-				<div>
-					przeznaczenie
-				</div>
-				<div id="destNum">
-
-				</div>
-
+				<div>Przeznaczenie dla numeru</div>
+				<div id="destNum"></div>
 			</div>
-			<div class="descContent">
-
-			</div>
+			<div class="descContent"></div>
 			<div class="nextWrapper">
-
 				<a class="btnNext" href="#personal-year">Osobisty rok</a>
 			</div>
-
 		</div>
 	</article>
 
 	<article id="personal-year">
-		
 		<div class="content">
 			<div class="topContent">
-				<div>
-					osobisty rok
-				</div>
-				<div id="yearNum">
-
-				</div>
+				<div>Twój osobisty rok</div>
+				<div id="yearNum"></div>
 			</div>
-			<div class="descContent">
-
-			</div>
+			<div class="descContent"></div>
 			<div class="nextWrapper">
-
 				<a class="btnNext" href="#birthday">Dzień urodzenia</a>
 			</div>
 		</div>
@@ -144,13 +115,11 @@
 	<article id="birthday">
 		
 		<div class="content">
-			<div class="topContent">
+			<div class="topContent birth">
 				<div>
-					dzień urodzenia
+					Wibracje <span id="birthdayNum"></span> dnia urodzenia
 				</div>
-				<div id="birthdayNum">
-
-				</div>
+				<div id="birthdayNum"></div>
 			</div>
 			<div class="descContent">
 
@@ -164,16 +133,13 @@
 
 	<article id="month-input"  class="inputSection">
 		<div class="content">
-
 			<div class="introContent">
 				<div class="intro">
 					Sprawdź swoją wibrację na dowolny miesiąc. Każdy miesiąc potrafi szczególnie wpływać na cały rok. W zależności od wibracji miesiąca powinieneś skupić się na tym, co przyniesie Ci największe zyski. Aby móc uzyskać wiedze na temat wibracji, sprawdź czy wypełniłeś dane w zakładce Start :)
 				</div>
-
-				<h1>Podaj miesiąc, aby poznać osobiste wibracje</h1>
+				<h1>Wybierz miesiąc, aby poznać osobiste wibracje</h1>
 			</div>
 			<div class="inputsContainer">
-		
 				<div class="inputWrapper">
 					<label for="monthSMInput">Miesiąc</label>
 					<select class="input" id="monthSMInput" name="monthSMInput">
@@ -193,7 +159,6 @@
 					</select>
 					<p class="info"></p>
 				</div>
-		
 				<div class="inputWrapper">
 					<label for="yearSMInput">Rok</label>
 					<input type="number" name="yearSMInput" id="yearSMInput">
@@ -201,19 +166,14 @@
 				</div>
 			</div>
 			<input type="button" id="checkMonthBtn" value="Sprawdź">
-
-			<div id="omenInfo">
-				
-			</div>
-
+			<div class="omenInfo"></div>
 			<div class="nextWrapper">
-				<a class="btnNext" href="#special-month">Szczególny miesiąc</a>
+				<a class="btnNext" href="#special-month">Sprawdź poniżej</a>
 			</div>
 		</div>
 	</article>
 
 	<article id="special-month">
-		
 		<div class="content">
 			<div class="topContent">
 				<div>
@@ -279,9 +239,11 @@
 				</div>
 			</div>
 			<input type="button" id="checkDayBtn" value="Sprawdź">
-
+			<div class="omenInfo">
+				
+			</div>
 			<div class="nextWrapper">
-				<a class="btnNext" href="#special-day">Twója szczególny dzień</a>
+				<a class="btnNext" href="#special-day">Sprawdź poniżej</a>
 			</div>
 		</div>
 	</article>
@@ -302,7 +264,7 @@
 			</div>
 			<div class="nextWrapper">
 
-				<a class="btnNext" href="#start">Nowa data</a>
+				<a class="btnNext" href="#start">Inna data</a>
 			</div>
 		</div>
 	</article>
