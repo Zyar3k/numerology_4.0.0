@@ -57,7 +57,12 @@ header #desktop ul li {
 }
 
 header #desktop ul li a {
+  padding: 10px;
   font-size: 24px;
+}
+
+header #desktop ul li a:hover {
+  text-shadow: 0 0 4px #fff, 0 0 8px #fff;
 }
 
 header #mobile ul {
@@ -627,44 +632,67 @@ article.inputSection .content .destinyNumberWrap.appear {
   article .content {
     margin-top: 0;
   }
+  article .content .topContent {
+    font-size: 20px;
+  }
+  article .content .topContent.birth {
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  article .content .descContent.birth {
+    width: 95%;
+  }
+  article .content .nextWrapper {
+    height: 4%;
+  }
+  article .content .btnNext {
+    min-height: 40px;
+    width: 200px;
+    font-size: 18px;
+  }
+  article.inputSection .content {
+    line-height: 1.4;
+  }
   article.inputSection .content .introContent .intro {
     text-align: center;
-    font-size: 16px;
-    width: 100%;
+    font-size: 12px;
+    width: 98%;
+    padding: 6px;
   }
   article.inputSection .content .introContent h1 {
-    font-size: 24px;
+    font-size: 18px;
   }
   article.inputSection .content input, article.inputSection .content select, article.inputSection .content .input {
-    height: 50px;
-    width: 220px;
-    font-size: 22px;
-    border: none;
-    border-radius: 8px;
+    height: 32px;
+    width: 190px;
+    font-size: 20px;
   }
   article.inputSection .content .inputsContainer {
     -ms-flex-direction: column;
         flex-direction: column;
   }
+  article.inputSection .content .inputsContainer .inputWrapper {
+    margin: 0;
+  }
   article.inputSection .content .inputsContainer .inputWrapper label {
-    font-size: 22px;
-    margin-bottom: 6px;
+    font-size: 16px;
+    margin-bottom: 4px;
   }
   article.inputSection .content .inputsContainer .inputWrapper p.info {
-    font-size: 16px;
-    color: red;
-    height: 20px;
-    text-align: center;
+    font-size: 10px;
   }
   article.inputSection .content .destinyNumberWrap {
-    min-height: 100px;
+    min-height: 60px;
+    font-size: 18px;
+    -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
   }
   article.inputSection .content .destinyNumberWrap .destinyNumberTitle {
     letter-spacing: 0;
   }
   article.inputSection .content .destinyNumberWrap .destinyNumber {
-    font-size: 50px;
-    width: 60px;
+    font-size: 30px;
+    width: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -51,8 +51,15 @@ header {
       li {
         list-style: none;
         padding: 10px 0;
+
         a {
+          padding: 10px;
           font-size: 24px;
+
+          &:hover {
+            text-shadow: 0 0 4px #fff,
+                        0 0 8px #fff;
+          }
         }
       }
     }
@@ -585,62 +592,89 @@ article {
 
     .content {
       margin-top: 0;
+
+      .topContent {
+        font-size: 20px;
+  
+        &.birth {
+          justify-content: center;
+        }
+      }
+
+      .descContent {
+  
+        &.birth {
+          width: 95%;
+        }
+      }
+
+
+      .nextWrapper {
+        height: 4%;
+      }
+
+      .btnNext {
+        min-height: 40px;
+        width: 200px;
+        font-size: 18px;
+      }
     }
 
     &.inputSection {
 
       .content {
+        line-height: 1.4;
 
         .introContent {
 
           .intro {
             text-align: center;
-            font-size: 16px;
-            width: 100%;
+            font-size: 12px;
+            width: 98%;
+            padding: 6px;
           }
 
           h1 {
-            font-size: 24px;
+            font-size: 18px;
           }
         }
 
         input, select, .input {
-          height: 50px;
-          width: 220px;
-          font-size: 22px;
-          border: none;
-          border-radius: 8px;
+          height: 32px;
+          width: 190px;
+          font-size: 20px;
         }
 
         .inputsContainer {
           flex-direction: column;
 
           .inputWrapper {
+            margin: 0;
   
             label {
-              font-size: 22px;
-              margin-bottom: 6px;
+              font-size: 16px;
+              margin-bottom: 4px;
             }
   
             p.info {
-              font-size: 16px;
-              color: red;
-              height: 20px;
-              text-align: center;
+              font-size: 10px;
             }
           }
         }
 
         .destinyNumberWrap {
-          min-height: 100px;
+          // background: red;
+          min-height: 60px;
+          font-size: 18px;
+          justify-content: space-evenly;
   
           .destinyNumberTitle {
             letter-spacing: 0;
           }
   
           .destinyNumber {
-            font-size: 50px;
-            width: 60px;
+            font-size: 30px;
+            width: 20px;
           }
         }
       }
