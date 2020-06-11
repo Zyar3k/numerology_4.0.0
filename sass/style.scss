@@ -13,7 +13,7 @@ body {
   margin: 0;
   padding: 0;
   color: #fff;
-  background: #0a4c7e;
+  // background: #0a4c7e;
   // overflow-y: hidden; /* Hide vertical scrollbar */
 
   a {
@@ -31,7 +31,8 @@ header {
   z-index: 1001;
 
   #desktop { 
-
+    background: rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid #fff;
     &.introMenu {
       transform: translateY(-50px);
       transition: 0.5s all ease-in-out;
@@ -59,7 +60,7 @@ header {
 
   #mobile ul {
     display: none;
-    background: #0a4c7e;
+    background-image: url(/images/img1.jpg);
     flex-direction: column;
     min-height: 100vh;
     left: -70%;
@@ -310,7 +311,9 @@ article.welcomeIntro {
 article {
   min-height: 100vh;
   display: flex;
+  background: rgba(0, 0, 0, 0.4);
   background-image: url(/images/img1.jpg);
+  background-blend-mode: multiply;
   background-position: center;
   background-size: cover;
 
@@ -321,6 +324,7 @@ article {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100%;
+    letter-spacing: 1px;
 
     .topContent {
       display: flex;
@@ -328,6 +332,8 @@ article {
       font-size: 40px;
       align-items: center;
       justify-content: space-evenly;
+      border-bottom: 1px solid #fff;
+      background: rgba(255, 255, 255, 0.2);
 
       &.birth {
         justify-content: center;
@@ -336,10 +342,18 @@ article {
 
     .descContent {
       display: flex;
+      width: 95%;
+      line-height: 1.6;
+      margin: 0 auto;
+      text-align: center;
       justify-content: center;
       align-items: center;
       font-size: 22px;
       min-height: auto;
+
+      &.birth {
+        width: 70%;
+      }
     }
 
     .nextWrapper {
@@ -375,6 +389,7 @@ article {
     .content {
       align-items: center;
       justify-content: space-around;
+      line-height: 1.6;
 
       .introContent {
         height: 20%;
@@ -565,8 +580,7 @@ article {
       }
     }
   }
-
-
+  
   article {
 
     .content {
