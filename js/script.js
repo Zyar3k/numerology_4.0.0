@@ -26,7 +26,7 @@ window.addEventListener('scroll', scrollAppear)
 // }
 
 // hamburger
-const burger = document.querySelector('.fa-sun');
+const burger = document.querySelector('.fa-hamburger');
 burger.addEventListener('click', () => {
   document.querySelector('#mobile ul').classList.toggle('active');
 });

@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  
 }
 
 h1, h2, h3, h4, h5, h6, p, ul {
@@ -13,6 +14,7 @@ body {
   padding: 0;
   color: #fff;
   background: #0a4c7e;
+  // overflow-y: hidden; /* Hide vertical scrollbar */
 
   a {
     color: #fff;
@@ -26,6 +28,7 @@ header {
   right: 0;
   top: 0;
   width: 100%;
+  z-index: 1001;
 
   #desktop { 
 
@@ -113,11 +116,13 @@ article.welcomeIntro {
     left: 50%;
     transform: translate(-50%, -50%);
     animation: fill 0.5s ease forwards 3.2s;
-    
+    text-shadow: 2px 2px 4px #fff;
+      
     
     & path:nth-child(1) {
       stroke-dasharray: 620;  
       stroke-dashoffset: 620;
+      box-shadow: 2px 2px 4px #fff;
       animation: line-anim 2s ease forwards;
     }
     & path:nth-child(2) {
@@ -171,72 +176,78 @@ article.welcomeIntro {
       animation: line-anim 2s ease forwards 2s;
     }
 
-    @keyframes logo {
-      from {
-        transform: translateY(0px);
-      }
-      to {
-        transform: translateY(20px);
-      }
-    }
+    
   }
 
   #bgdDigitWrapp {
-    // background-color: red;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 500px;
-    height: 500px;
     
     .bgdDig {
       height: 300px;
-      // background: #000;
       position: absolute;
-      // filter: grayscale(70%);
+      filter: grayscale(40%);
       opacity: 0;
 
       &.bgdDigit-2 {
         bottom: 10%;
         left: 20%;
-        // background: blue;
         animation: digAppear 2s ease-in-out infinite alternate 1s;
       }
       &.bgdDigit-3 {
         height: 350px;
         right: 5%;
         top: 5%;
-        // background: pink;
         animation: digAppear 1.5s ease-in-out infinite alternate 0.5s;
       }
       &.bgdDigit-4 {
         height: 380px;
         left: 0%;
-        // background: green;
         animation: digAppear 2s ease-in-out infinite alternate 1s;
       }
       &.bgdDigit-5 {
         right: 0%;
-        // background: yellow;
         animation: digAppear 2.5s ease-in-out infinite alternate;
       }
       &.bgdDigit-7 {
         top: 25%;
-        // background: antiquewhite;
         animation: digAppear 2s ease-in-out infinite alternate 1.5s;
       }
       &.bgdDigit-8 {
         bottom: 10%;
         right: 20%;
         animation: digAppear 2.5s ease-in-out infinite alternate 1s;
-        // background: violet;
       }
       &.bgdDigit-9 {
         height: 220px;
         top: 10%;
         left: 10%;
         animation: digAppear 3s ease-in-out infinite alternate 2s;
-        // background: darkcyan;
+      }
+      &.bgdDigit-11 {
+        height: 120px;
+        right: 55%;
+        bottom: 35%;
+        animation: digAppear 2.5s ease-in-out infinite alternate;
+      }
+      &.bgdDigit-12 {
+        top: 15%;
+        right: 35%;
+        height: 120px;
+        animation: digAppear 2s ease-in-out infinite alternate 1.5s;
+      }
+      &.bgdDigit-13 {
+        bottom: 50%;
+        height: 160px;
+        right: 30%;
+        animation: digAppear 2.5s ease-in-out infinite alternate 1s;
+      }
+      &.bgdDigit-10 {
+        height: 120px;
+        bottom: 10%;
+        left: 10%;
+        animation: digAppear 3s ease-in-out infinite alternate 2s;
       }
 
       @keyframes digAppear {
@@ -247,19 +258,27 @@ article.welcomeIntro {
           opacity: 1;
         }
       }
-
-
     }
   }
 
   .btnStartWrapper {
     position: absolute;
     bottom: 100px;
-    animation: logo 1s ease infinite alternate;
+    animation: bounce 1s ease infinite alternate;
+    z-index: 100;
 
     i {
       font-size: 60px;
       animation: appear 15s ease forwards;
+    }
+  }
+
+  @keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(20px);
     }
   }
 
@@ -283,7 +302,7 @@ article.welcomeIntro {
       fill: transparent;
     }
     to {
-      fill: black;
+      fill: goldenrod;
     }
   }
 }
@@ -475,197 +494,78 @@ article {
   }
 
   article.welcomeIntro {
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // background-image: url(/images/img0.jpg);
-    // background-color: rgba(0,0,0,0.5);
-    // background-blend-mode: multiply;
-    // background-position: center;
-    // background-size: cover;
   
     #logo {
-      z-index: 100;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      animation: fill 0.5s ease forwards 3.2s;
       width: 90%;
-      
-      
-      & path:nth-child(1) {
-        stroke-dasharray: 620;  
-        stroke-dashoffset: 620;
-        animation: line-anim 2s ease forwards;
-      }
-      & path:nth-child(2) {
-        stroke-dasharray: 503;
-        stroke-dashoffset: 503;
-        animation: line-anim 2s ease forwards .2s;
-      }
-      & path:nth-child(3) {
-        stroke-dasharray: 844;
-        stroke-dashoffset: 844;
-        animation: line-anim 2s ease forwards .4s;
-      }
-      & path:nth-child(4) {
-        stroke-dasharray: 500;
-        stroke-dashoffset: 500;
-        animation: line-anim 2s ease forwards .6s;
-      }
-      & path:nth-child(5) {
-        stroke-dasharray: 530;
-        stroke-dashoffset: 530;
-        animation: line-anim 2s ease forwards .8s;
-      }
-      & path:nth-child(6) {
-        stroke-dasharray: 554;  
-        stroke-dashoffset: 554;
-        animation: line-anim 2s ease forwards 1s;
-      }
-      & path:nth-child(7) {
-        stroke-dasharray: 302;
-        stroke-dashoffset: 302;
-        animation: line-anim 2s ease forwards 1.2s;
-      }
-      & path:nth-child(8) {
-        stroke-dasharray: 554;
-        stroke-dashoffset: 554;
-        animation: line-anim 2s ease forwards 1.4s;
-      }
-      & path:nth-child(9) {
-        stroke-dasharray: 525;
-        stroke-dashoffset: 525;
-        animation: line-anim 2s ease forwards 1.6s;
-      }
-      & path:nth-child(10) {
-        stroke-dasharray: 217;
-        stroke-dashoffset: 217;
-        animation: line-anim 2s ease forwards 1.8s;
-      }
-      & path:nth-child(11) {
-        stroke-dasharray: 663;
-        stroke-dashoffset: 663;
-        animation: line-anim 2s ease forwards 2s;
-      }
-  
-      @keyframes logo {
-        from {
-          transform: translateY(0px);
-        }
-        to {
-          transform: translateY(20px);
-        }
-      }
     }
   
     #bgdDigitWrapp {
-      // background-color: red;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      // width: 500px;
-      // height: 500px;
       
       .bgdDig {
-        height: 100px;
-        // background: #000;
-        position: absolute;
-        filter: grayscale(70%);
-        opacity: 0;
+        height: 150px;
   
         &.bgdDigit-2 {
-          bottom: 10%;
-          left: 20%;
-          // background: blue;
-          animation: digAppear 2s ease-in-out infinite alternate 1s;
+          height: 200px;
+          top: 1%;
+          left: 2%;
         }
         &.bgdDigit-3 {
-          height: 250px;
+          height: 150px;
           right: 5%;
-          top: 5%;
-          // background: pink;
-          animation: digAppear 1.5s ease-in-out infinite alternate 0.5s;
+          top: 25%;
         }
         &.bgdDigit-4 {
-          height: 180px;
+          height: 150px;
           left: 0%;
-          // background: green;
-          animation: digAppear 2s ease-in-out infinite alternate 1s;
+          bottom: 30%;
         }
         &.bgdDigit-5 {
-          right: 0%;
-          // background: yellow;
-          animation: digAppear 2.5s ease-in-out infinite alternate;
+          height: 100px;
+          right: 5%;
+          bottom: 30%;
         }
         &.bgdDigit-7 {
-          top: 25%;
-          // background: antiquewhite;
-          animation: digAppear 2s ease-in-out infinite alternate 1.5s;
+          height: 100px;
+          top: 35%;
+          left: 20%;
         }
         &.bgdDigit-8 {
-          bottom: 10%;
-          right: 20%;
-          animation: digAppear 2.5s ease-in-out infinite alternate 1s;
-          // background: violet;
+          height: 200px;
+          bottom: 2%;
+          left: 15%;
         }
         &.bgdDigit-9 {
-          height: 120px;
+          height: 100px;
           top: 10%;
-          left: 10%;
-          animation: digAppear 3s ease-in-out infinite alternate 2s;
-          // background: darkcyan;
+          left: 60%;
         }
-  
-        @keyframes digAppear {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
+        &.bgdDigit-11 {
+          display: none;
         }
-  
-  
+        &.bgdDigit-12 {
+          display: none;
+        }
+        &.bgdDigit-13 {
+          display: none;
+        }
+        &.bgdDigit-10 { 
+          display: none;
+        }
       }
     }
   
     .btnStartWrapper {
       position: absolute;
       bottom: 100px;
-      animation: logo 1s ease infinite alternate;
+      animation: bounce 1s ease infinite alternate;
   
       i {
         font-size: 60px;
         animation: appear 15s ease forwards;
       }
     }
-  
-    @keyframes appear {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-  
-    @keyframes line-anim {
-      to{
-        stroke-dashoffset: 0;
-      }
-    }
-    
-    @keyframes fill {
-      from {
-        fill: transparent;
-      }
-      to {
-        fill: black;
-      }
-    }
   }
+
 
   article {
 
@@ -727,7 +627,6 @@ article {
           .destinyNumber {
             font-size: 50px;
             width: 60px;
-            // background: blue;
           }
         }
       }
