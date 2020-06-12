@@ -3,19 +3,16 @@
 
 function scrollAppear() {
   const introMenu = document.querySelector('.introMenu');
-  const start = document.querySelector('#start')
+  const start = document.querySelector('#start');
   const startPosition = start.getBoundingClientRect().bottom / 2;
-  console.log(startPosition)
   const screenPosition = window.outerHeight;
 
-  console.log('screenPosition', screenPosition)
-
   if(startPosition < screenPosition) {
-    introMenu.classList.add('introAppear')
+    introMenu.classList.add('introAppear');
   }
 }
 
-window.addEventListener('scroll', scrollAppear)
+window.addEventListener('scroll', scrollAppear);
 
 
 // const logo = document.querySelectorAll('#logo path')
@@ -100,7 +97,6 @@ function getNumber(input) {
 
 function dayStart() {
   let day = reduceToDigit(getNumber(dInpDest));
-  console.log(day)
   if (day === undefined) {
     dInpDest.parentElement.querySelector('.info').innerHTML = 'Wypełnij pole';
   } else if (getNumber(dInpDest) <= 0 || getNumber(dInpDest) > 31) {
@@ -171,15 +167,13 @@ function putBirthdayInfo() {
 }
 
 checkBtn.addEventListener('click', ()=> {
-  console.log('click');
-
   putDestinyInfo();
   putPersonalYear()
   putBirthdayInfo();
 });
 
 function monthSM() {
-  const month = reduceToDigit(getNumber(mSplMonth));
+  const month = reduceToDigit(mSplMonth.selectedIndex);
   if (month === undefined) {
     mSplMonth.parentElement.querySelector('.info').innerHTML = 'Wypełnij pole';
   } else mSplMonth.parentElement.querySelector('.info').innerHTML = '';
@@ -206,8 +200,8 @@ function putSpecialMonth() {
   
   const num = reduceToDigit(bDay + bMonth + spMonth + spYear);
   if (num) {
-    specialMonthNum.innerHTML = num;
-    document.querySelector('#month-input .omenInfo').innerHTML = 'Twoja wróżba jest gotowa';
+    specialMonthNum.innerHTML = mSplMonth.value + ' ' + ySplMonth.value;
+    document.querySelector('#month-input .omenInfo').innerHTML = '<i class="fas fa-chevron-circle-down"></i>';
     sMonDesc.innerHTML = specialMonth[num].description;
   }
   return
@@ -225,7 +219,6 @@ function daySP() {
     dSpDay.parentElement.querySelector('.info').innerHTML = 'Podaj poprawny dzień';
   } else
     dSpDay.parentElement.querySelector('.info').innerHTML = '';
-    console.log(day)
   return day
 }
 
@@ -257,7 +250,7 @@ function putSpecialDay() {
   const num = reduceToDigit(dest + specDest);
   if (num) {    
     specialDayNum.innerHTML = num;
-    document.querySelector('#day-input .omenInfo').innerHTML = 'Twoja wróżba jest gotowa';
+    document.querySelector('#day-input .omenInfo').innerHTML = '<i class="fas fa-chevron-circle-down"></i>';
     sDayDesc.innerHTML = specialDay[num].description;
   }
   return

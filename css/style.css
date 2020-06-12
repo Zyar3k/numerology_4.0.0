@@ -507,6 +507,7 @@ article.inputSection .content .input {
 }
 
 article.inputSection .content .omenInfo {
+  font-size: 40px;
   animation: blink 1s infinite ease-in-out;
 }
 
@@ -631,6 +632,9 @@ article.inputSection .content .destinyNumberWrap.appear {
   }
   article .content {
     margin-top: 0;
+  }
+  article .content .mobHide {
+    display: none;
   }
   article .content .topContent {
     font-size: 20px;

@@ -453,6 +453,7 @@ article {
       }
 
       .omenInfo {
+        font-size: 40px;
         animation: blink 1s infinite ease-in-out;
       }
       .destinyNumberWrap {
@@ -591,6 +592,9 @@ article {
     .content {
       margin-top: 0;
 
+      .mobHide {
+        display: none;
+      }
       .topContent {
         font-size: 20px;
   
