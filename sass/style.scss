@@ -81,10 +81,10 @@ header {
     li {
       display: flex;
       justify-content: flex-end;
-      padding: 20px;
+      padding: 20px 10px;
 
       a {
-        padding: 20px;
+        padding: 20px 0;
       }
     }
 
@@ -98,7 +98,7 @@ header {
     position: fixed;
     right: 0;
     bottom: 0;
-    font-size: 60px;
+    font-size: 50px;
     display: none;
 
     i {
