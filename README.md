@@ -1,6 +1,6 @@
 # Numerologia / Numerology
 
-[LIVE DEMO](https://numerologia.netlify.app/)
+[LIVE DEMO](https://numerologia.netlify.app/){:target="_blank"}
 
 > Find out your lucky numbers
 ##### Used in project
